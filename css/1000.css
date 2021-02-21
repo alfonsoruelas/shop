@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+:root {
+	--colorMedio: #b46b96;
+	--colorOscuro: #562c45;
+	--colorClaro: #ce9eba;
+	--colorSelect: #96b46b;
+	--colorGrisMuyClaro: #ddd;
+	--colorGrisClaro: #999;
+	--colorGrisOscuro: #333;
+	--fondoEncabezado: #fff;
+	--colorLetraMenu: #fff;
+	--colorImportante: #f926a2;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	/*font-family: 'Slabo 27px', sans-serif;*/
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+/*estilos para encabezado*/
+header {
+	position: relative;
+	display: block;
+	background-color: var(--fondoEncabezado);
+	height: 60px;
+	margin: 0;
+	padding: 5px;
+}
+header #logo {
+	position: absolute;
+	height: 50px;
+	width: auto;
+	top 0;
+	left: 20;
+}
+header #eslogan {
+	position: absolute;
+	color: var(--colorGrisOscuro);
+	bottom: 10px;
+	right: 20px;
+	font-size: 90%;
+	text-transform: capitalize;
+	text-align: right;
+}
+
+/*estilos para barra de navegacion*/
+#menu-principal {
+	position: sticky;
+	display: block;
+	top: 0;
+	background-color: var(--colorMedio);
+	z-index: 1;
+}
+#menu-principal > div {
+	position: relative;
+	display: block;
+	float: left;
+	text-align: center;
+	background-color: var(--colorMedio);
+}
+#home,
+#menu {
+	width: 10%;
+	z-index: 5;
+}
+#iconos-rs {
+	width: 80%;
+	z-index: 4;
+}
+#menu-principal ion-icon {
+	font-size: 140%;
+	color: var(--colorLetraMenu);
+}
+#home a,
+#menu nav,
+#iconos-rs a {
+	position: relative;
+	display: inline-block;	
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+#home a,
+#menu nav {
+	padding: 7px 16%;
+}
+#iconos-rs a {
+	padding: 7px 2%;
+}
+
+#home a:hover,
+#iconos-rs a:hover,
+#menu nav:hover {
+	background-color: var(--colorSelect);
+	transition: all 0.3s ease;
+}
+
+#menu > nav > span {
+	margin-right: 0px;
+}
+#menu > nav:hover > div.mega-menu {
+	display: block;
+}
+
+
+/*---diseño de mega menú----*/
+.mega-menu {
+	position: absolute;
+	display: none;
+	padding: 10px;
+	top: 40px;
+	left: 0;
+	width: 400%;
+	background-color: var(--colorGrisMuyClaro);
+	box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+	z-index: 5;
+}
+
+.mega-menu > a {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 10px;
+	/*width: 20px;*/
+	/*height: 30px;*/
+	text-decoration: none;
+	font-size: 80%;
+	font-weight: normal;
+	color: var(--colorGrisOscuro);
+	background-color: var(--colorClaro);
+	padding: 10px 10px;
+	border-radius: 5px;
+}
+.mega-menu > a:hover {
+	color: var(--colorGrisMuyClaro);
+	background-color: var(--colorSelect);
+	transition: all 0.3s ease;
+}
+
+/*---para el contenido principal de items----*/
+main {
+	clear: both;
+}
+.items-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: auto;
+	padding: 2% 2%;
+	width: 100%;
+}
+.item {
+	width: 50%;
+	padding: 0 30px;
+	margin: 20px 0;
+}
+.item-photo img {
+	width: 100%;
+	border-radius: 5px;
+}
+.item-description p {
+	text-align: center;
+	font-size: 80%;
+}
+.item-price p {
+	text-align: center;
+	font-size: 100%;
+	margin-top: 15px;
+}
+
+
+/* --- pie de página ---*/
+footer {
+	position: relative;
+	display: block;
+}
+footer .redes-sociales {
+	background-color: var(--colorClaro);
+	padding: 10px 0;
+	text-align: center;
+}
+footer .redes-sociales a {
+	text-decoration: none;
+	color: var(--colorGrisOscuro);
+	text-transform: capitalize;
+	font-size: 80%;
+	margin: 0 10px;
+}
+footer .redes-sociales ion-icon {
+	font-size: 240%;
+	color: var(--colorOscuro);
+}
+footer .redes-sociales ion-icon:hover {
+	font-size: 240%;
+	color: var(--colorImportante);
+	transition: all 0.3s ease;
+}
+footer #tu-tienda {
+	background-color: var(--colorOscuro);
+	padding: 10px 0;
+	text-align: center;
+}
+footer #tu-tienda a {
+	text-decoration: none;
+	color: var(--colorGrisMuyClaro);
+	text-transform: capitalize;
+	font-size: 70%;
+}
+
+/* --- media query ---*/
+@media only screen and (max-width: 600px) {
+	.item {
+		width: 100%;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.item {
+		width: 33.33%;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.item {
+		width: 25%;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.item {
+		width: 20%;
+	}
+}

@@ -17,7 +17,6 @@
 	box-sizing: border-box;
 }
 html {
-	/*font-family: 'Slabo 27px', sans-serif;*/
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 }
@@ -30,13 +29,13 @@ header {
 	position: relative;
 	display: block;
 	background-color: var(--fondoEncabezado);
-	height: 60px;
+	height: 120px;
 	margin: 0;
 	padding: 5px;
 }
 header #logo {
 	position: absolute;
-	height: 50px;
+	height: 110px;
 	width: auto;
 	top 0;
 	left: 20;
@@ -46,7 +45,7 @@ header #eslogan {
 	color: var(--colorGrisOscuro);
 	bottom: 10px;
 	right: 20px;
-	font-size: 90%;
+	font-size: 100%;
 	text-transform: capitalize;
 	text-align: right;
 }
@@ -143,6 +142,15 @@ header #eslogan {
 	color: var(--colorGrisMuyClaro);
 	background-color: var(--colorSelect);
 	transition: all 0.3s ease;
+}
+.categoria h3 {
+	font-size: 70%;
+
+}
+.categoria ul {
+	font-size: 50%;
+	list-style: none;
+	
 }
 
 /*---para el contenido principal de items----*/

@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">  
-  <head>    
-    <title>Tienda en línea</title>    
-    <meta charset="UTF-8"> 
-    <link rel="stylesheet" type="text/css" href="css/1000.css">  
-  </head>  
-
-  <body>    
-    <?php require 'header.php';?> 
-    <?php require 'menu_top.php';?>
+    <?php require '1_header.php';?> 
+    <?php require '1_menu_top.php';?>
      
     <main>
       <div class="items-container">
@@ -203,7 +194,4 @@
 
     </main>
 
-    <?php require 'footer.php';?> 
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-  </body>  
-</html>
+    <?php require '1_footer.php';?> 
